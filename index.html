@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Canton Interviews</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#FF0051;--plum:#13002D;--grey:#484F56;--black:#1F2323;--light:#ECEDEE;--white:#FFFFFF;--line:#DADCDD}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--light)}
+body{font-family:Poppins,sans-serif;color:var(--black);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:32px 16px}
+.wrap{max-width:860px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+header img{height:24px}
+header span{font-size:12px;color:var(--grey)}
+h1{font-weight:800;font-size:32px;letter-spacing:-1px;color:var(--plum);line-height:1.1;margin-bottom:6px}
+.lede{color:var(--grey);margin-bottom:28px}
+.day{margin-bottom:28px}
+.day h2{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.card{background:var(--white);border-top:4px solid var(--red);padding:18px 22px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.card .n{font-weight:700;font-size:16px;color:var(--plum)}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btns a{text-decoration:none;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;border:1.5px solid var(--plum);color:var(--plum)}
+.btns a.p{background:var(--plum);color:#fff}
+.btns a:hover{border-color:var(--red);color:var(--red)}
+.btns a.p:hover{background:var(--red);color:#fff}
+.key{font-size:12px;color:var(--grey);margin-top:8px}
+@media (max-width:600px){h1{font-size:26px}.card{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="wf_logo_en_hrz_pos.svg" alt="WorldFirst"><span>Canton Fair · October 2026</span></header>
+  <h1>The Canton Interview</h1>
+  <p class="lede">Every interview has three docs: <b>Production</b> (crew), <b>Host</b> (interviewer) and <b>Guest</b> (send to the guest).</p>
+  <div id="days"></div>
+</div>
+<script>
+// Add new interviews here. Each guest: name + three Google Doc links.
+const DAYS = [
+  { label: "16 October · Morning", guests: [
+    { name: "Uncle Siang (Tang Siew Siang)", docs: {
+      production: "https://docs.google.com/document/d/1Ak60OzLJY6vM1PEvvO8VAyobHDHklpw_ZUKA2AN8TNQ/edit",
+      host: "https://docs.google.com/document/d/1UH3yX61URtyvstW5iq_GmvpNLjkBL4r3vWZjuIHjyRI/edit",
+      guest: "https://docs.google.com/document/d/1evpMr3gt4_vjBgnI_2ZpVfGR2qnrX4qwTN7NzPYrDso/edit" } },
+    { name: "Shirley Xie, CEO, BigSeller", docs: {
+      production: "https://docs.google.com/document/d/1ki3uDnj1hDjOyOlUjTI4PYktoToU0hFw0uz3BBvb0og/edit",
+      host: "https://docs.google.com/document/d/1S68I_L28PtB84ang4ts9VqbQzF1mD-9jKaYRLT9J3ag/edit",
+      guest: "https://docs.google.com/document/d/1RzQ-qgwYAhdnBjtaxF0pYqXyVaZeNDxpkLXyUqTy57w/edit" } },
+    { name: "Daniel Chua, WorldFirst", docs: {
+      production: "https://docs.google.com/document/d/1TsBbIGd7tlUF_HJBHqX6S7kvUS1zhxdR-0F1d4f-XeY/edit",
+      host: "https://docs.google.com/document/d/1ZZWHA0ehef8yXYcNiCNDu2PcOCDNepdCM-MDLOhM4VY/edit",
+      guest: "https://docs.google.com/document/d/12nXrJU21dpzmqdXwuGCDiGFigTEyJ0YhrwE7_B-QkSM/edit" } }
+  ]}
+];
+const el = document.getElementById("days");
+for (const d of DAYS) {
+  const s = document.createElement("section"); s.className = "day";
+  s.innerHTML = `<h2>${d.label}</h2>` + d.guests.map(g => `
+    <div class="card"><div class="n">${g.name}</div><div class="btns">
+      <a class="p" href="${g.docs.production}" target="_blank" rel="noopener">Production</a>
+      <a href="${g.docs.host}" target="_blank" rel="noopener">Host</a>
+      <a href="${g.docs.guest}" target="_blank" rel="noopener">Guest</a>
+    </div></div>`).join("");
+  el.appendChild(s);
+}
+</script>
+</body>
+</html>
