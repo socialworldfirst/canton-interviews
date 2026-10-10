@@ -21,6 +21,7 @@ h1{font-weight:800;font-size:32px;letter-spacing:-1px;color:var(--plum);line-hei
 .day h2{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
 .card{background:var(--white);border-top:4px solid var(--red);padding:18px 22px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 .card .n{font-weight:700;font-size:16px;color:var(--plum)}
+.tag{display:inline-block;margin-left:8px;font-size:11px;font-weight:600;color:var(--grey);border:1px solid var(--line);border-radius:999px;padding:1px 8px;vertical-align:middle}
 .btns{display:flex;gap:8px;flex-wrap:wrap}
 .btns a{text-decoration:none;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;border:1.5px solid var(--plum);color:var(--plum)}
 .btns a.p{background:var(--plum);color:#fff}
@@ -42,10 +43,34 @@ h1{font-weight:800;font-size:32px;letter-spacing:-1px;color:var(--plum);line-hei
 // DAYS-START
 const DAYS = [
  {
+  "label": "15 October",
+  "guests": [
+   {
+    "name": "Chunli Zhang, Founder and CEO, WeeKett",
+    "region": "US / UK",
+    "docs": {
+     "production": "https://docs.google.com/document/d/1A0yjmr0p91Rack8GJynfak0zUk7msfu5f8gbsI_p-wQ/edit",
+     "host": "https://docs.google.com/document/d/1p035gcStU0I3uDSLsfQQNHlN3lMg-Y3_XxZVRGXAfsM/edit",
+     "guest": "https://docs.google.com/document/d/1IyLWEzl7en6OoKl8KETBUx863CETsqMImhVPX2-Hdlc/edit"
+    }
+   },
+   {
+    "name": "CJ Dropshipping representative (name TBC)",
+    "region": "Global",
+    "docs": {
+     "production": "https://docs.google.com/document/d/1lcUXVfLEaSvZxgnige7WRU2uD0fGYvQO0pfaqr1Do3M/edit",
+     "host": "https://docs.google.com/document/d/1Hl4hsOduBl_Al6B3iZ5l_t2U2OlI3Z8EhlF34HVhZO8/edit",
+     "guest": "https://docs.google.com/document/d/1Qx7iknbLC2kHgPD2kNXO_KHZF33Z5aaRTw1nmozhWt8/edit"
+    }
+   }
+  ]
+ },
+ {
   "label": "16 October",
   "guests": [
    {
     "name": "Uncle Siang (Tang Siew Siang)",
+    "region": "MY",
     "docs": {
      "production": "https://docs.google.com/document/d/1Ak60OzLJY6vM1PEvvO8VAyobHDHklpw_ZUKA2AN8TNQ/edit",
      "host": "https://docs.google.com/document/d/1UH3yX61URtyvstW5iq_GmvpNLjkBL4r3vWZjuIHjyRI/edit",
@@ -54,6 +79,7 @@ const DAYS = [
    },
    {
     "name": "Shirley Xie, CEO, BigSeller",
+    "region": "MY",
     "docs": {
      "production": "https://docs.google.com/document/d/1ki3uDnj1hDjOyOlUjTI4PYktoToU0hFw0uz3BBvb0og/edit",
      "host": "https://docs.google.com/document/d/1S68I_L28PtB84ang4ts9VqbQzF1mD-9jKaYRLT9J3ag/edit",
@@ -67,6 +93,7 @@ const DAYS = [
   "guests": [
    {
     "name": "Daniel Chua, WorldFirst",
+    "region": "",
     "docs": {
      "production": "https://docs.google.com/document/d/1TsBbIGd7tlUF_HJBHqX6S7kvUS1zhxdR-0F1d4f-XeY/edit",
      "host": "https://docs.google.com/document/d/1ZZWHA0ehef8yXYcNiCNDu2PcOCDNepdCM-MDLOhM4VY/edit",
@@ -81,7 +108,7 @@ const el = document.getElementById("days");
 for (const d of DAYS) {
   const s = document.createElement("section"); s.className = "day";
   s.innerHTML = `<h2>${d.label}</h2>` + d.guests.map(g => `
-    <div class="card"><div class="n">${g.name}</div><div class="btns">
+    <div class="card"><div class="n">${g.name}${g.region ? `<span class="tag">${g.region}</span>` : ""}</div><div class="btns">
       <a class="p" href="${g.docs.production}" target="_blank" rel="noopener">Production</a>
       <a href="${g.docs.host}" target="_blank" rel="noopener">Host</a>
       <a href="${g.docs.guest}" target="_blank" rel="noopener">Guest</a>
