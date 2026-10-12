@@ -20,6 +20,7 @@ h1{font-weight:800;font-size:32px;letter-spacing:-1px;color:var(--plum);line-hei
 .day{margin-bottom:28px}
 .day h2{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
 .card{background:var(--white);border-top:4px solid var(--red);padding:18px 22px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.card .av{width:44px;height:44px;border-radius:50%;object-fit:cover;margin-right:12px;vertical-align:middle}
 .card .n{font-weight:700;font-size:16px;color:var(--plum)}
 .tag{display:inline-block;margin-left:8px;font-size:11px;font-weight:600;color:var(--grey);border:1px solid var(--line);border-radius:999px;padding:1px 8px;vertical-align:middle}
 .btns{display:flex;gap:8px;flex-wrap:wrap}
@@ -48,6 +49,7 @@ const DAYS = [
    {
     "name": "Chunli Zhang, Founder and CEO, WeeKett",
     "region": "US / UK",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1A0yjmr0p91Rack8GJynfak0zUk7msfu5f8gbsI_p-wQ/edit",
      "host": "https://docs.google.com/document/d/1p035gcStU0I3uDSLsfQQNHlN3lMg-Y3_XxZVRGXAfsM/edit",
@@ -55,8 +57,11 @@ const DAYS = [
     }
    },
    {
-    "name": "CJ Dropshipping representative (name TBC)",
+    "name": "Joey Wang, Marketing Manager, CJ Dropshipping",
     "region": "Global",
+    "photos": [
+     "img/joey-wang.jpg"
+    ],
     "docs": {
      "production": "https://docs.google.com/document/d/1lcUXVfLEaSvZxgnige7WRU2uD0fGYvQO0pfaqr1Do3M/edit",
      "host": "https://docs.google.com/document/d/1Hl4hsOduBl_Al6B3iZ5l_t2U2OlI3Z8EhlF34HVhZO8/edit",
@@ -71,6 +76,7 @@ const DAYS = [
    {
     "name": "Uncle Siang (Tang Siew Siang)",
     "region": "MY",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1Ak60OzLJY6vM1PEvvO8VAyobHDHklpw_ZUKA2AN8TNQ/edit",
      "host": "https://docs.google.com/document/d/1UH3yX61URtyvstW5iq_GmvpNLjkBL4r3vWZjuIHjyRI/edit",
@@ -80,6 +86,7 @@ const DAYS = [
    {
     "name": "Shirley Xie, CEO, BigSeller",
     "region": "MY",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1ki3uDnj1hDjOyOlUjTI4PYktoToU0hFw0uz3BBvb0og/edit",
      "host": "https://docs.google.com/document/d/1S68I_L28PtB84ang4ts9VqbQzF1mD-9jKaYRLT9J3ag/edit",
@@ -89,6 +96,7 @@ const DAYS = [
    {
     "name": "Pari Jazz, Founder, Pari Jazz (parijazz.de)",
     "region": "DE",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1we7qeYrFPeQgzG60GO6PT6wHmb8uvDYfjLg8zaQ98IQ/edit",
      "host": "https://docs.google.com/document/d/1zDMnkvLztGOUfn6jz9G8Hox4Q73LSUddl800isgof8g/edit",
@@ -101,8 +109,11 @@ const DAYS = [
   "label": "17 October",
   "guests": [
    {
-    "name": "Printbelle client (name TBC) and Printbelle representative (name TBC)",
+    "name": "Xin (Skyler) Wang, Head of Europe, Printbelle, with a Printbelle client (name TBC)",
     "region": "DE",
+    "photos": [
+     "img/skyler-wang.jpg"
+    ],
     "docs": {
      "production": "https://docs.google.com/document/d/13kVvwVgzPtK9OVjf3-nwuUK8ySyRl_1PqkECHNK8NbY/edit",
      "host": "https://docs.google.com/document/d/1qflZJ8I0tUUoTMjbBZo5i9uAP1vRHVbCejjFGUg-bqc/edit",
@@ -112,6 +123,7 @@ const DAYS = [
    {
     "name": "GQC guest 1, German seller (name TBC)",
     "region": "DE",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1EZddv9juTlTUulaiVU2muc2k56IgVcbyeKjpuY6MBBQ/edit",
      "host": "https://docs.google.com/document/d/1tbxwxV2uBXbjBpR1DEmVOtsVYZkQ54QW9_MC8RoZNJ4/edit",
@@ -121,6 +133,7 @@ const DAYS = [
    {
     "name": "GQC guest 2, German seller (name TBC)",
     "region": "DE",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1k-6ckaMHPSRI5TAQHb3X5roiw9yqNMxUHmprvYOMxlM/edit",
      "host": "https://docs.google.com/document/d/16DxafEdUH-IcpKlMh9wPju_bdzof7HcPcKwoM-1LqT4/edit",
@@ -130,6 +143,7 @@ const DAYS = [
    {
     "name": "GQC guest 3, German seller (name TBC)",
     "region": "DE",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1TDqfkIi4d-Q_cPsNYLJSM2hwQLinkhJTT1ziWojApyo/edit",
      "host": "https://docs.google.com/document/d/1VkBz4uc_J7qCIJAYxWQAnyqONzFVrYLCLuKehswDp2A/edit",
@@ -144,6 +158,7 @@ const DAYS = [
    {
     "name": "Burak, Turkey client (company TBC)",
     "region": "TR",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1xcwmnW9tehTWarlXZicrU5atmurhLZUH6FsxxgVs7PE/edit",
      "host": "https://docs.google.com/document/d/19MXSkzknyh4KWO0FujGuv1xSB0HXu1xNp05V_WWyv0c/edit",
@@ -158,6 +173,7 @@ const DAYS = [
    {
     "name": "Raif, Turkey client (company TBC)",
     "region": "TR",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1eB15_zRWyrIxTepOZQrvXxxdDEfTojf3kORfHjSvE1M/edit",
      "host": "https://docs.google.com/document/d/1UIRoXOxlcSBS543PBP7CtWKdHPNjrAs4w8jVPkhUvvg/edit",
@@ -167,6 +183,7 @@ const DAYS = [
    {
     "name": "Birkan, Turkey client (company TBC)",
     "region": "TR",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1mw1MMVrFoXcPv1ZlxQTOFb_YyTdy5J3D0qVZeU-t0KI/edit",
      "host": "https://docs.google.com/document/d/1MZxs8WmekMKWmhHI84H5Dw2hzIdjyAykbXG-wtw88BI/edit",
@@ -181,6 +198,7 @@ const DAYS = [
    {
     "name": "창업다마고치 (@damagochii), Korean creator",
     "region": "KR",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/174D4M0XweXQMX0-Q33MYPfz6OlcqGl-fwrZ6AYZnjZ4/edit",
      "host": "https://docs.google.com/document/d/1AqH9jNpPod6ZKtbaASNyj1V6AzrqTVzi8AB5EL8-2fU/edit",
@@ -195,6 +213,7 @@ const DAYS = [
    {
     "name": "디지털곰마드 (@digitalgommad), Korean creator",
     "region": "KR",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1pXWdk73vWe2mzEJcoQXymk4YxhykfkMCqf_X6v1gEuU/edit",
      "host": "https://docs.google.com/document/d/1ZMV2rGot1syniBOkx9g6_Dud3CoaBeZfkePRCsT5Irs/edit",
@@ -204,6 +223,7 @@ const DAYS = [
    {
     "name": "Tay, UK seller (company TBC)",
     "region": "UK",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/14McTO0Qf1pqZHg5sftC6APUqed43prmUq63ADC4lwCo/edit",
      "host": "https://docs.google.com/document/d/16g8bxbjAOW0vALZiWNq5JR47vt1IiydClv1bw57lsyk/edit",
@@ -218,6 +238,7 @@ const DAYS = [
    {
     "name": "Daniel Chua, WorldFirst",
     "region": "",
+    "photos": [],
     "docs": {
      "production": "https://docs.google.com/document/d/1TsBbIGd7tlUF_HJBHqX6S7kvUS1zhxdR-0F1d4f-XeY/edit",
      "host": "https://docs.google.com/document/d/1ZZWHA0ehef8yXYcNiCNDu2PcOCDNepdCM-MDLOhM4VY/edit",
@@ -232,7 +253,7 @@ const el = document.getElementById("days");
 for (const d of DAYS) {
   const s = document.createElement("section"); s.className = "day";
   s.innerHTML = `<h2>${d.label}</h2>` + d.guests.map(g => `
-    <div class="card"><div class="n">${g.name}${g.region ? `<span class="tag">${g.region}</span>` : ""}</div><div class="btns">
+    <div class="card"><div class="n">${(g.photos||[]).map(u=>`<img class="av" src="${u}" alt="">`).join("")}${g.name}${g.region ? `<span class="tag">${g.region}</span>` : ""}</div><div class="btns">
       <a class="p" href="${g.docs.production}" target="_blank" rel="noopener">Production</a>
       <a href="${g.docs.host}" target="_blank" rel="noopener">Host</a>
       <a href="${g.docs.guest}" target="_blank" rel="noopener">Guest</a>
